@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ataraxia Intelligence — The AI Evidence Layer for Enterprise Infrastructure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #F4F1EA;
+            color: #2C1E1B;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            letter-spacing: -0.01em;
+        }
+
+        h1, h2, h3, .brand-header {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #2C1E1B;
+            margin-top: 0;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: 2.75rem;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.85rem;
+            line-height: 1.25;
+            border-bottom: 1px solid #2C1E1B;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #2C1E1B;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            text-decoration: none;
+            color: #2C1E1B;
+        }
+
+        .nav-links a {
+            color: #2C1E1B;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .section {
+            border-bottom: 1px solid #2C1E1B;
+            padding: 5rem 0;
+        }
+
+        .sub-header {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .grid-item {
+            padding-top: 1rem;
+        }
+
+        .item-num {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.25rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .evidence-ledger-box {
+            background-color: #F4F1EA;
+            border: 2px solid #2C1E1B;
+            border-radius: 0px;
+            padding: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            margin: 2.5rem 0;
+        }
+
+        .ledger-title {
+            font-weight: bold;
+            border-bottom: 2px solid #2C1E1B;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .ledger-row {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #2C1E1B;
+            padding: 0.6rem 0;
+        }
+
+        .status-secure {
+            color: #D4AF37;
+            font-weight: bold;
+        }
+
+        .star-highlight {
+            color: #D4AF37;
+        }
+
+        .btn-primary {
+            background-color: #2C1E1B;
+            color: #F4F1EA !important;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            padding: 1rem 2rem;
+            border: 1px solid #2C1E1B;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+            margin-top: 1rem;
+        }
+
+        .btn-primary:hover {
+            background-color: #F4F1EA;
+            color: #2C1E1B !important;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #2C1E1B !important;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            padding: 1rem 2rem;
+            border: 1px solid #2C1E1B;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+            margin-top: 1rem;
+            margin-left: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background-color: #2C1E1B;
+            color: #F4F1EA !important;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        input, textarea, select {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #2C1E1B;
+            color: #2C1E1B;
+            padding: 0.75rem 0;
+            width: 100%;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-bottom: 2px solid #D4AF37;
+        }
+
+        .radio-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            text-transform: none !important;
+            font-weight: normal !important;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+        }
+
+        .radio-label input {
+            width: auto;
+            margin-right: 0.75rem;
+            margin-bottom: 0;
+        }
+
+        footer {
+            padding: 4rem 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .nav-container { flex-direction: column; gap: 1rem; text-align: center; }
+            .nav-links a { margin: 0 0.75rem; }
+            .btn-secondary { margin-left: 0; margin-top: 0.5rem; display: block; text-align: center; }
+            .btn-primary { display: block; text-align: center; }
+            footer { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-container">
+        <a href="#" class="nav-logo">Ataraxia Intelligence</a>
+        <div class="nav-links">
+            <a href="#challenge">The Challenge</a>
+            <a href="#architecture">Infrastructure</a>
+            <a href="#alignment">Alignment</a>
+            <a href="#authority">Authority</a>
+            <a href="#connect">Initiate Sprint ↗</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <header class="section" style="border-top: none; padding-top: 3rem;">
+            <span class="sub-header">ATX / INFRASTRUCTURE SYSTEMS — SECURE CORE 001</span>
+            <h1>Financial numbers survive audits.<br>Spreadsheet estimations do not.</h1>
+            <p style="max-width: 800px; font-size: 1.2rem; margin-bottom: 2.5rem;">
+                Ataraxia reads unstructured utility bills, field fuel logs, and procurement files, programmatically cross-checks them via a deterministic rules-engine, and securely hashes every data point directly to its unalterable source document. We build the rigid compliance layer that leaves East African enterprises completely audit-ready for the mandatory IFRS S1/S2 assurance windows.
+            </p>
+            <a href="#connect" class="btn-primary">Secure Your Baseline: Initiate a Readiness Sprint ↗</a>
+            <a href="#architecture" class="btn-secondary">View System Architecture ↓</a>
+        </header>
+
+        <div class="evidence-ledger-box">
+            <div class="ledger-title">[ ASSET METRIC RECORD: NAIROBI INDUSTRIAL NODE ]</div>
+            <div class="ledger-row"><span>Telemetry Source:</span> <span>KPLC Utility Ledger (March 2026)</span></div>
+            <div class="ledger-row"><span>Extracted Value:</span> <span>412,000 kWh</span></div>
+            <div class="ledger-row"><span>Model Confidence:</span> <span>99.8% [Deterministic Proof String Verified]</span></div>
+            <div class="ledger-row"><span>Audit Status:</span> <span class="status-secure">[✓] EVIDENCE SECURE (Hashed to Block Node)</span></div>
+            <div class="ledger-row"><span>Physical File:</span> <span>kplc_nairobi_2026-03.pdf</span></div>
+            <div class="ledger-row"><span>Cryptographic Hash:</span> <span>9f3c8b2a…a41e9b2c (SHA-256 Protocol)</span></div>
+            <div class="ledger-row"><span>Verified Citation:</span> <span>"Units consumed 412,000 kWh"</span></div>
+            <div class="ledger-row" style="border-bottom: none;"><span>Execution Code:</span> <span>Verified: Unit quote match / No chronological duplicate</span></div>
+            <p style="font-family: inherit; font-size: 0.8rem; margin: 1.5rem 0 0 0; line-height: 1.4;">
+                <span class="star-highlight">★</span> Rule Engine Principle: No metric enters an executive ledger until its underlying source document is extracted, validated, and programmatically proven.
+            </p>
+        </div>
+
+        <section id="challenge" class="section">
+            <span class="sub-header">01 / The Regulatory Emergency</span>
+            <h2>The 2027 legal compliance window leaves no room for spreadsheet drift.</h2>
+            <p style="max-width: 800px;">
+                Under ICPAK's binding regulatory roadmap, IFRS S1 and S2 requirements apply directly to Kenyan Public Interest Entities (PIEs) for reporting periods beginning on or after 1 January 2027. True corporate assurance requires absolute proof. Yet, your core operational data remains scattered across physical fuel card receipts, unintegrated generator runtime logs, and vendor invoices that were never engineered to withstand an external financial audit.
+            </p>
+            
+            <div class="grid-3">
+                <div class="grid-item">
+                    <span class="item-num">01 —</span>
+                    <h3>Data Fragmentation</h3>
+                    <p style="font-size: 0.95rem;">Isolated Operational Silos: Telemetry arrives across disparate facilities in erratic intervals and unstandardized formats. Consolidating this manually into standard financial reports is slow, brittle, and impossible to repeat reliably.</p>
+                </div>
+                <div class="grid-item">
+                    <span class="item-num">02 —</span>
+                    <h3>The Verification Vacuum</h3>
+                    <p style="font-size: 0.95rem;">Unverifiable Disclosures: When an aggregate emission number is decoupled from its physical source document, your enterprise cannot prove its validity. If an auditor cannot trace it, your capital access faces immediate risk.</p>
+                </div>
+                <div class="grid-item">
+                    <span class="item-num">03 —</span>
+                    <h3>Regulatory Exposure</h3>
+                    <p style="font-size: 0.95rem;">The Cost of Manual Entry: Financial controllers and external consultants waste hundreds of hours re-keying historical logs by hand. Structural errors and calculation drift are buried silently until the final audit exposes them.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="section">
+            <span class="sub-header">02 / The Technical Architecture</span>
+            <h2>AI extracts. Plain code calculates. Audits clear.</h2>
+            <p style="max-width: 800px;">
+                Ataraxia replaces manual human data entry with an unalterable processing pipeline. We cleanly segregate artificial intelligence from mathematical calculation, ensuring complete defensibility.
+            </p>
+
+            <div class="grid-2">
+                <div class="grid-item">
+                    <span class="item-num">01 /</span>
+                    <h3>Dynamic Document Ingestion</h3>
+                    <p>Vision-capable models ingest your historical utility bills, fuel manifests, and remote asset telemetry. It extracts precise consumption metrics and captures the exact verbatim text snippet where the value resides.</p>
+                </div>
+                <div class="grid-item">
+                    <span class="item-num">02 /</span>
+                    <h3>Programmatic Threshold Auditing</h3>
+                    <p>Our deterministic rules-engine cross-checks the data for chronological gaps, double-billings, and mathematical anomalies. Any value lacking explicit evidence or clear human sign-off is instantly isolated.</p>
+                </div>
+                <div class="grid-item">
+                    <span class="item-num">03 /</span>
+                    <h3>Cryptographic Traceability</h3>
+                    <p>Every verified metric is irreversibly tied to its original document via unique file hashes (SHA-256). Estimates and data holes are clearly segregated and flagged with specific uncertainty bounds—never blended with hard evidence.</p>
+                </div>
+                <div class="grid-item">
+                    <span class="item-num">04 /</span>
+                    <h3>The Evidence Dossier</h3>
+                    <p>The system exports an impeccably formatted, beautifully structured compliance portfolio for your executive board and external assurance providers. The foundational emissions mathematics is written in immutable, open code—never an AI model's guess.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="alignment" class="section">
+            <span class="sub-header">03 / Institutional Alignment</span>
+            <h2>Engineered for the executives accountable for the balance sheet.</h2>
+            <div class="grid-2">
+                <div class="grid-item" style="border-bottom: 1px solid #2C1E1B; padding-bottom: 1.5rem;">
+                    <h3>Public Interest Entities & Large Enterprises</h3>
+                    <p>Manufacturers, commercial agribusinesses, and multi-site logistics networks who must transform complex operational footprints into defensible, boardroom-ready reports.</p>
+                </div>
+                <div class="grid-item" style="border-bottom: 1px solid #2C1E1B; padding-bottom: 1.5rem;">
+                    <h3>Tier-1 Financial Institutions & Lenders</h3>
+                    <p>Banking nodes requiring primary, asset-level borrower data to satisfy financed-emissions portfolios, underwriting rules, and sustainability-linked lending frameworks.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Tier-1 Supply Chain Nodes</h3>
+                    <p>Mid-market manufacturers and tier-1 suppliers who must continuously deliver pristine, audit-ready data packets to secure their standing with major multinational buyers.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Assurance Providers & Advisory Firms</h3>
+                    <p>External audit and corporate compliance teams seeking structured evidence packages, unalterable data trails, and rapid client sampling to accelerate the assurance cycle.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="sub-header">04 / Architectural Principles</span>
+            <h2>Integrity by design.</h2>
+            <div class="grid-3">
+                <div class="grid-item">
+                    <h3>Radical Traceability</h3>
+                    <p style="font-size: 0.95rem;">The lineage connecting a raw physical asset record, its computational transformation, and the final corporate disclosure must remain completely transparent and open to inspection.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Deterministic Math</h3>
+                    <p style="font-size: 0.95rem;">We banish black-box calculations. AI is utilized solely to read text; plain, versioned, open-source code executes all calculations. The engineering remains fully inspectable.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Absolute Human Oversight</h3>
+                    <p style="font-size: 0.95rem;">Automation streamlines the verification pipeline; it never replaces professional judgment. A named corporate officer must review and sign off on every validated ledger state.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="authority" class="section">
+            <span class="sub-header">05 / Executive Authority</span>
+            <h2>Institutional expertise built into the platform architecture.</h2>
+            <p style="max-width: 800px; font-size: 1.15rem; line-height: 1.7;">
+                <strong>Ruby Margret Odhiambo</strong> is the founder of Ataraxia Intelligence and Kolando, a high-status corporate design and climate infrastructure firm based in Nairobi. She holds specialized certifications including EDGE Certification from the International Finance Corporation (IFC) and Sustainable Finance for Climate and Energy from the United Nations Development Programme (UNDP). A Circular Carbon Africa Fellow completing her BSc in International Business Administration at USIU-Africa, she anchors the platform's data engine in strict regulatory and corporate finance frameworks.
+            </p>
+        </section>
+
+        <section id="connect" class="section" style="border-bottom: none;">
+            <span class="sub-header">06 / The Entry Point</span>
+            <h2>See your corporate data exactly the way a financial auditor will.</h2>
+            <p style="max-width: 800px; margin-bottom: 3rem;">
+                Before transitioning to continuous automated API data ingestion, secure your operational baseline with a high-margin, fixed-scope <strong>Readiness Sprint</strong>. Over a structured timeframe, our technical core processes 12 months of your enterprise's historical utility bills, fuel manifests, and asset records. We expose all critical evidence gaps, isolate calculation anomalies, and hand your finance committee an unalterable, source-linked Evidence Dossier that your assurance providers can seamlessly sign off on.
+            </p>
+
+            <div class="form-container">
+                <span class="sub-header" style="letter-spacing: 0.05em; font-size: 0.8rem;">Connect with our Infrastructure Team</span>
+                <p style="font-size: 0.85rem; font-style: italic; margin-top: -0.5rem; margin-bottom: 2rem;">
+                    This portal configures an enquiry intent directly inside your native corporate mail application. Ataraxia does not store your operational telemetry on public web servers.
+                </p>
+
+                <form action="mailto:hello@ataraxia-intelligence.com" method="GET" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Executive Name</label>
+                        <input type="text" id="name" name="subject" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Enterprise Node Name</label>
+                        <input type="text" id="company" name="body_company" placeholder="Organization / Company" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Strategic Objective</label>
+                        <div class="radio-grid">
+                            <label class="radio-label"><input type="radio" name="body_objective" value="Mandatory IFRS S1/S2 Compliance Setup" checked> Mandatory IFRS S1/S2 Compliance Setup</label>
+                            <label class="radio-label"><input type="radio" name="body_objective" value="Capital Access & Financed Emission Verification"> Capital Access & Financed Emission Verification</label>
+                            <label class="radio-label"><input type="radio" name="body_objective" value="Corporate Supply Chain Data Integration"> Corporate Supply Chain Data Integration</label>
+                            <label class="radio-label"><input type="radio" name="body_objective" value="Commission a Fixed-Scope Readiness Sprint"> Commission a Fixed-Scope Readiness Sprint</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Operational Bottleneck to Resolve</label>
+                        <textarea id="message" name="body_message" rows="4" placeholder="Briefly describe your fragmented data tracking bottlenecks..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%; border-radius: 0px;">Generate Secure Corporate Enquiry ↗</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <div style="border-top: 1px solid #2C1E1B; margin-top: 4rem;">
+        <footer>
+            <div>
+                <p class="brand-header" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Ataraxia Intelligence</p>
+                <p style="font-size: 0.8rem; font-style: italic;">The AI Evidence Layer for Emerging Market Infrastructure.</p>
+                <p style="font-size: 0.8rem; margin-top: 1rem;">Nairobi, Kenya</p>
+            </div>
+            <div style="max-width: 450px; text-align: right;">
+                <p style="font-size: 0.8rem; line-height: 1.5; margin-bottom: 0;">
+                    © Ataraxia Intelligence. All Rights Reserved. Data Processing Agreements and security frameworks governed strictly under the Kenya Data Protection Act.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
